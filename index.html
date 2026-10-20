@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Familienplaner</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🍽️ Familienplaner</h1>
+
+</header>
+
+<div id="home">
+
+    <div class="card">
+
+        <strong>Heute</strong><br>
+
+        🍝 Spaghetti Bolognese<br>
+
+        8 Portionen
+
+    </div>
+
+    <div class="grid">
+
+        <div class="tile" onclick="showPage('wochenplan')">
+            🗓️<br>Wochenplan
+        </div>
+
+        <div class="tile" onclick="showPage('rezepte')">
+            📖<br>Rezepte
+        </div>
+
+        <div class="tile" onclick="showPage('einkauf')">
+            🛒<br>Einkaufsliste
+        </div>
+
+        <div class="tile" onclick="showPage('vorraete')">
+            📦<br>Vorräte
+        </div>
+
+        <div class="tile" onclick="showPage('favoriten')">
+            ⭐<br>Favoriten
+        </div>
+
+        <div class="tile" onclick="showPage('einstellungen')">
+            ⚙️<br>Einstellungen
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Rezepte -->
+
+<div id="rezepte" class="page">
+
+    <button onclick="goHome()">
+        ← Zurück
+    </button>
+
+    <h2>📖 Rezepte</h2>
+
+    <input
+        id="recipeName"
+        placeholder="Rezeptname">
+
+    <select id="recipeCategory">
+
+        <option>Pasta</option>
+        <option>Fleisch</option>
+        <option>Fisch</option>
+        <option>Vegetarisch</option>
+        <option>Auflauf</option>
+
+    </select>
+
+    <button onclick="saveRecipe()">
+        Rezept speichern
+    </button>
+
+    <div id="recipeList"></div>
+
+</div>
+
+<!-- Wochenplan -->
+
+<div id="wochenplan" class="page">
+
+    <button onclick="goHome()">
+        ← Zurück
+    </button>
+
+    <h2>🗓️ Wochenplan</h2>
+
+    <div class="card">
+
+        Kalender folgt in Alpha 0.3
+
+    </div>
+
+</div>
+
+<!-- Einkauf -->
+
+<div id="einkauf" class="page">
+
+    <button onclick="goHome()">
+        ← Zurück
+    </button>
+
+    <h2>🛒 Einkaufsliste</h2>
+
+    <input
+        id="shoppingInput"
+        placeholder="Artikel hinzufügen">
+
+    <button onclick="addShoppingItem()">
+        Artikel hinzufügen
+    </button>
+
+    <div id="shoppingList"></div>
+
+</div>
+
+<!-- Vorräte -->
+
+<div id="vorraete" class="page">
+
+    <button onclick="goHome()">
+        ← Zurück
+    </button>
+
+    <h2>📦 Vorräte</h2>
+
+    <div class="card">
+        🥫 Vorratskammer
+    </div>
+
+    <div class="card">
 
